@@ -5,25 +5,11 @@ into implementation-ready blueprints for websites and mobile apps. The crew
 handles architectural design, component planning, design-system guidance, and
 backlog generation so you can move from concept to build with confidence.
 
-## Repository Structure
-
-src/engineering_team/
-│
-├── config/
-│   ├── agents.yaml        # Agent roles, goals, and backstories
-│   └── tasks.yaml         # Task definitions and output directives
-│
-├── crew.py                # Crew assembly (agents + tasks)
-├── main.py                # CLI entrypoint with configurable requirements
-├── tools/                 # Custom tool stubs (extend as needed)
-│
-tests/                     # Place automated tests here
-requirements.txt           # Dependency mirror for quick installs
-pyproject.toml             # Package metadata and entrypoints
-env                        # Local-only model configuration
-
-
-
+## Note
+This is a sample / beta version only and has to be heavily modified if you wish to
+deploy Professional and Industrial projects. This version is helpful for students who
+are looking to build demos and prototypes. If you wish a more advanced version, please
+contact me on luvlohano@gmail.com
 
 ## Prerequisites
 - Python 3.10 – 3.13
@@ -32,12 +18,12 @@ env                        # Local-only model configuration
 
 ## Setup
 1. **Create a virtual environment** (Already done):
-   `ash
+   `bash
    python -m venv .venv
    source .venv/bin/activate  # Windows: .venv\Scripts\activate
    `
 2. **Install dependencies**:
-   `ash
+   `bash
    pip install -r requirements.txt
    `
 3. **Configure environment variables**:
