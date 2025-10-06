@@ -1,0 +1,53 @@
+﻿design_task:
+  description: >
+    Develop a detailed blueprint in markdown covering the module layout, public methods,
+    data schemas, and validation strategies required to generate multi-platform website
+    and app artefacts. Highlight how sitemap nodes reference page specs, how design tokens
+    flow into components, and how backlog items connect to navigation entries.
+    Focus on a single Python module {module_name} exposing class {class_name}.
+  expected_output: >
+    Markdown design document outlining classes, methods, schemas, data relationships,
+    and error handling expectations for the blueprint generator.
+  agent: engineering_lead
+  output_file: output/{module_name}_design.md
+
+code_task:
+  description: >
+    Implement the design in Python, ensuring the module can ingest requirement briefs
+    and emit structured dictionaries for navigation, page specifications, design system,
+    and implementation backlog. Provide mutation helpers (add/remove/update) that keep
+    references synced. Maintain JSON serialisability for every artefact.
+  expected_output: >
+    Raw Python code for {module_name} defining class {class_name} and all supporting
+    helpers. No markdown or extra commentary—just executable Python.
+  agent: backend_engineer
+  context:
+    - design_task
+  output_file: output/{module_name}
+
+frontend_task:
+  description: >
+    Build app.py, a Gradio demo that captures requirement inputs, triggers the blueprint
+    generator, and renders key artefacts with tabs or accordions for sitemap, screens,
+    design tokens, and backlog summaries. Include affordances to download artefacts as
+    JSON.
+  expected_output: >
+    Raw Python code for app.py placed alongside {module_name}. It should import
+    {class_name} and render outputs ready for stakeholder review.
+  agent: frontend_engineer
+  context:
+    - code_task
+  output_file: output/app.py
+
+test_task:
+  description: >
+    Create automated tests verifying blueprint integrity: schema validation, identifier
+    uniqueness, update helper behaviour, and JSON serialisability. Cover both valid and
+    invalid requirement inputs to confirm robust error handling.
+  expected_output: >
+    Raw Python code for test_{module_name} containing a self-contained unittest/pytest
+    suite that imports {module_name} and exercises core behaviours.
+  agent: test_engineer
+  context:
+    - code_task
+  output_file: output/test_{module_name}
