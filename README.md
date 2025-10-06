@@ -8,16 +8,27 @@ backlog generation so you can move from concept to build with confidence.
 ## Repository Structure
 `
 ├── src/engineering_team
+
 │   ├── config
+
 │   │   ├── agents.yaml        # Agent roles, goals, and backstories
+
 │   │   └── tasks.yaml         # Task definitions and output directives
+
 │   ├── crew.py                # Crew assembly (agents + tasks)
+
 │   ├── main.py                # CLI entrypoint with configurable requirements
+
 │   └── tools/                 # Custom tool stubs (extend as needed)
+
 ├── tests/                     # Place automated tests here
+
 ├── requirements.txt           # Dependency mirror for quick installs
+
 ├── pyproject.toml             # Package metadata and entrypoints
+
 └── .env                       # Local-only model configuration
+
 `
 
 ## Prerequisites
