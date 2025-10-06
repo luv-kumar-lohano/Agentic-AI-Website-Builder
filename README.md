@@ -1,17 +1,9 @@
-﻿# Multi-Agent Website & App Development with CrewAI
+﻿# Multi-Agent Website & App Development with CrewAI (Sample / Beta Version)
 
 Orchestrate a full-stack CrewAI team that transforms high-level product briefs
 into implementation-ready blueprints for websites and mobile apps. The crew
 handles architectural design, component planning, design-system guidance, and
 backlog generation so you can move from concept to build with confidence.
-
-## Why This Project
-- **Multi-agent automation**: Engineering lead, backend, frontend, and QA agents
-  collaborate sequentially using CrewAI configurations.
-- **Website + app focus**: Default requirements drive the system toward
-  multi-surface planning instead of single-purpose demos.
-- **Production-ready outputs**: Generated modules, UI prototypes, and unit tests
-  are deposited in the output/ directory for review and iteration.
 
 ## Repository Structure
 `
