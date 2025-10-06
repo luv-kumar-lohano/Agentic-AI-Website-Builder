@@ -6,7 +6,7 @@ handles architectural design, component planning, design-system guidance, and
 backlog generation so you can move from concept to build with confidence.
 
 ## Repository Structure
-`
+
 ├── src/engineering_team
 
 │   ├── config
@@ -29,7 +29,7 @@ backlog generation so you can move from concept to build with confidence.
 
 └── .env                       # Local-only model configuration
 
-`
+
 
 ## Prerequisites
 - Python 3.10 – 3.13
